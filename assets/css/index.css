@@ -105,3 +105,9 @@ nav p {
 #registroItem span.horarios {
     color: #4D4D4D;
 }
+
+#itemPonto .radios {
+    color: #717171;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+}
