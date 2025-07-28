@@ -1,0 +1,107 @@
+* {
+    margin: unset;
+    padding: unset;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('fonts/Inter-Regular.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('fonts/Inter-Bold.otf');
+    font-weight: 700;
+}
+
+body {
+    font-family: 'inter', Arial, Helvetica, sans-serif;
+}
+
+nav {
+    background: #F6F5F3;
+    border-bottom: 1px solid #D4D4D4;
+    height: 4rem;
+    line-height: 4rem;
+    color: #000;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+nav p {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.container {
+    padding: 1.25rem;
+}
+
+.container h2 {
+    font-size: 1.12rem;
+    margin-bottom: 12px;
+}
+
+#itemPonto {
+    margin-bottom: 20px;
+}
+
+#itemPonto label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: #717171;
+}
+
+#itemPonto input {
+    padding: 12px;
+    border: 1px solid #E3E3E3;
+    border-radius: 8px;
+    font-family: 'inter';
+    font-size: 1.25rem;
+}
+
+#itemPonto input.data_registro {
+    width: 325px;
+}
+
+#registerPonto {
+    border: unset;
+    background-color: #1E201E;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: 'inter';
+    font-size: 1.12rem;
+    font-weight: 500;
+    width: 351px;
+    height: 3.57rem;
+}
+
+#itemPonto input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-left: 26px;
+}
+
+
+.registrosBox {
+    border: 1px solid #E3E3E3;
+    padding: 15px;
+}
+
+#registroItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+#registroItem span.data_reg {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+#registroItem span.horarios {
+    color: #4D4D4D;
+}

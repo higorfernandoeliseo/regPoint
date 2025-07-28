@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegPoint</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+    
+    <nav>
+        <p>RegPoint</p>
+    </nav>
+    <div class="container">
+        <h2>Novo Ponto:</h2>
+        <form id="itemPonto">
+            <label>
+                <input type="date" name="dia_registro" class="data_registro">
+            </label>
+            <label class="radios">
+                <input type="radio" name="tipo_registro" value="1"> Entrada
+                <input type="radio" name="tipo_registro" value="2"> Saida
+            </label>
+            <label>
+                Digite a Hora:
+                <input type="time">
+            </label>
+            <button type="submit" id="registerPonto">
+                Registrar Ponto
+            </button>
+        </form>
+        <h2>Seus Registros:</h2>
+        <div class="registrosBox">
+            <div id="registroItem">
+                <span class="data_reg">26 de Julho de 2025 - Sabado</span>
+                <span class="horarios">06:55 - 12:01 - 13:02 - 15:20</span>
+            </div>
+            <div id="registroItem">
+                <span class="data_reg">27 de Julho de 2025 - Domingo</span>
+                <span class="horarios">07:00 - 12:00 - 13:01 - 15:19</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
