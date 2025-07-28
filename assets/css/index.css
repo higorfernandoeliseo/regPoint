@@ -60,10 +60,11 @@ nav p {
     border-radius: 8px;
     font-family: 'inter';
     font-size: 1.25rem;
+    background: #fff;
 }
 
 #itemPonto input.data_registro {
-    width: 325px;
+    width: 327px;
 }
 
 #registerPonto {
@@ -75,7 +76,7 @@ nav p {
     font-family: 'inter';
     font-size: 1.12rem;
     font-weight: 500;
-    width: 351px;
+    width: 353px;
     height: 3.57rem;
 }
 
