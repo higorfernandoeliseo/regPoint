@@ -13,8 +13,6 @@ itemPonto.onsubmit = async (e) => {
     const tipo_reg = document.getElementById('tipo_registro')
     const hora_reg = document.getElementById('hora_registro')
 
-    await db.items.add({data_reg,tipo_reg,tipo_reg})
-
-    itemPonto.reset()
+    await db.items.add({data,hora,tipo})
 
 }

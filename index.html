@@ -16,15 +16,15 @@
         <h2>Novo Ponto:</h2>
         <form id="itemPonto">
             <label>
-                <input type="date" name="dia_registro" class="data_registro">
+                <input type="date" name="dia_registro" id="dia" class="data_registro">
             </label>
             <div class="radios">
-                <input type="radio" name="tipo_registro" value="1"> Entrada
-                <input type="radio" name="tipo_registro" value="2"> Saida
+                <input type="radio" name="tipo_registro" id="tipo" value="1"> Entrada
+                <input type="radio" name="tipo_registro" id="tipo" value="2"> Saida
             </div>
             <label>
                 Digite a Hora:
-                <input type="time" name="hora_registro">
+                <input type="time" id="hora" name="hora_registro">
             </label>
             <button type="submit" id="registerPonto">
                 Registrar Ponto
