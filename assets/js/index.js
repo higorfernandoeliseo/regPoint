@@ -20,8 +20,7 @@ const populateItemsDiv = async () => {
       // itemsDiv.appendChild(li_data)
       // itemsDiv.appendChild(li)
       itemsDiv.innerHTML += `<div id="registroItem">
-            <span class="data_reg">${item.data} - ${item.tipo}</span>
-            <span class="horarios">${item.hora}</span>
+            <span class="data_reg">${item.data} - ${item.tipo}:  <span class="horarios">${item.hora}</span></span>
         </div>`
 
 
@@ -43,7 +42,7 @@ itemPonto.onsubmit = async (e) => {
 
 
     const datainput = document.getElementById('dia_registro').value
-    const getData = new Date(datainput)
+    const getData = new Date(`${datainput}T12:00:00Z`)
     data = getData.toLocaleDateString('pt-BR');
     const tipo = document.querySelector('input[name="tipo_registro"]:checked').value;
     const hora = document.getElementById('hora_registro').value
