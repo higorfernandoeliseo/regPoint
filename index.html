@@ -6,6 +6,14 @@
     <title>RegPoint</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <script src="assets/js/dexie.min.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js');
+        });
+      }
+    </script>
+
 </head>
 <body>
     
