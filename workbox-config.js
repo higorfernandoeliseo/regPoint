@@ -3,7 +3,6 @@ module.exports = {
 	globPatterns: [
 		'**/*.{otf,css,js,html}'
 	],
-	swDest: 'RegPoint/sw.js',
 	ignoreURLParametersMatching: [
 		/^utm_/,
 		/^fbclid$/
