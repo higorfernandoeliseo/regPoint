@@ -14,24 +14,12 @@ const populateItemsDiv = async () => {
     itemsDiv.innerHTML = '';
     allItems.forEach(item => {
       const li = document.createElement('li')
-      // const li_data = document.createElement('li')
-      // li_data.textContent = `${item.data}`
-      // li.textContent = `${item.tipo} - ${item.hora}`
-      // itemsDiv.appendChild(li_data)
-      // itemsDiv.appendChild(li)
       itemsDiv.innerHTML += `<div id="registroItem">
             <span class="data_reg">${item.data} - ${item.tipo}:  <span class="horarios">${item.hora}</span></span>
         </div>`
 
 
     })
-
-    // itemsDiv.innerHTML = allItems.map(item => `
-    //     <div id="registroItem">
-    //         <span class="data_reg">${item.data}</span>
-    //         <span class="horarios">${item.hora}</span>
-    //     </div>
-    // `)
     
 }
 
