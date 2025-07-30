@@ -107,6 +107,10 @@ nav p {
     margin-bottom: 4px;
 }
 
+div.container h2 {
+    font-size: 1em;
+}
+
 #registroItem span.horarios {
     color: #616161;
 }
