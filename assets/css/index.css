@@ -36,6 +36,7 @@ nav p {
 
 .container {
     padding: 1.25rem;
+    position: absolute;
 }
 
 .container h2 {
