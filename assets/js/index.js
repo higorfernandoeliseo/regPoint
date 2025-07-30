@@ -1,18 +1,55 @@
+
+const itemPonto = document.getElementById('itemPonto')
+const itemsDiv = document.getElementById('registrosBox')
+
 const db = new Dexie('PontoDB')
 db.version(1).stores({
     items: `++pontoid,data,hora,tipo`
 })
 
-const itemPonto = document.getElementById('itemPonto')
-const itemsDiv = document.getElementById('registroItem')
+const populateItemsDiv = async () => {
+
+    const allItems = await db.items.reverse().toArray()
+
+    itemsDiv.innerHTML = '';
+    allItems.forEach(item => {
+      const li = document.createElement('li')
+      // const li_data = document.createElement('li')
+      // li_data.textContent = `${item.data}`
+      // li.textContent = `${item.tipo} - ${item.hora}`
+      // itemsDiv.appendChild(li_data)
+      // itemsDiv.appendChild(li)
+      itemsDiv.innerHTML += `<div id="registroItem">
+            <span class="data_reg">${item.data} - ${item.tipo}</span>
+            <span class="horarios">${item.hora}</span>
+        </div>`
+
+
+    })
+
+    // itemsDiv.innerHTML = allItems.map(item => `
+    //     <div id="registroItem">
+    //         <span class="data_reg">${item.data}</span>
+    //         <span class="horarios">${item.hora}</span>
+    //     </div>
+    // `)
+    
+}
+
+window.onload = populateItemsDiv
 
 itemPonto.onsubmit = async (e) => {
     e.preventDefault()
 
-    const data_reg = document.getElementById('dia_registro')
-    const tipo_reg = document.getElementById('tipo_registro')
-    const hora_reg = document.getElementById('hora_registro')
+
+    const datainput = document.getElementById('dia_registro').value
+    const getData = new Date(datainput)
+    data = getData.toLocaleDateString('pt-BR');
+    const tipo = document.querySelector('input[name="tipo_registro"]:checked').value;
+    const hora = document.getElementById('hora_registro').value
 
     await db.items.add({data,hora,tipo})
+
+    itemPonto.reset()
 
 }

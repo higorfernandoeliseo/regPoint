@@ -16,31 +16,22 @@
         <h2>Novo Ponto:</h2>
         <form id="itemPonto">
             <label>
-                <input type="date" name="dia_registro" id="dia" class="data_registro">
+                <input type="date" name="dia_registro" id="dia_registro" class="data_registro">
             </label>
             <div class="radios">
-                <input type="radio" name="tipo_registro" id="tipo" value="1"> Entrada
-                <input type="radio" name="tipo_registro" id="tipo" value="2"> Saida
+                <input type="radio" name="tipo_registro" id="tipo_registro" value="Entrada"> Entrada
+                <input type="radio" name="tipo_registro" id="tipo_registro" value="Saida"> Saida
             </div>
             <label>
                 Digite a Hora:
-                <input type="time" id="hora" name="hora_registro">
+                <input type="time" id="hora_registro" name="hora_registro">
             </label>
             <button type="submit" id="registerPonto">
                 Registrar Ponto
             </button>
         </form>
         <h2>Seus Registros:</h2>
-        <div class="registrosBox">
-            <div id="registroItem">
-                <span class="data_reg">26 de Julho de 2025 - Sabado</span>
-                <span class="horarios">06:55 - 12:01 - 13:02 - 15:20</span>
-            </div>
-            <div id="registroItem">
-                <span class="data_reg">27 de Julho de 2025 - Domingo</span>
-                <span class="horarios">07:00 - 12:00 - 13:01 - 15:19</span>
-            </div>
-        </div>
+        <div id="registrosBox"></div>
     </div>
 
     <script src="assets/js/index.js"></script>
