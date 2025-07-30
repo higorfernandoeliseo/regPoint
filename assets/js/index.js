@@ -36,6 +36,7 @@ itemPonto.onsubmit = async (e) => {
     const hora = document.getElementById('hora_registro').value
 
     await db.items.add({data,hora,tipo})
+    await populateItemsDiv()
 
     itemPonto.reset()
 
