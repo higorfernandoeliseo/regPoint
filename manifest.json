@@ -23,7 +23,7 @@
     "theme_color": "#FFFFFF",
     "background_color": "#FFFFFF",
     "start_url":  "/regPoint/",
-    "display": "standalone",
+    "display": "fullscreen",
     "orientation": "portrait",
     "id": "regPoint",
   "display_override": [
