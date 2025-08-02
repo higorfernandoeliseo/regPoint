@@ -129,7 +129,7 @@ div.container h2 {
 
 
 #exportButton {
-    border: unset;
+    border: none;
     background-color: #cfc9bc;
     color: #585449;
     padding: 12px;
