@@ -23,11 +23,11 @@
     "theme_color": "#FFFFFF",
     "background_color": "#FFFFFF",
     "start_url":  "/regPoint/",
-    "display": "standalone",
+    "display": "fullscreen",
     "orientation": "portrait",
     "id": "regPoint",
   "display_override": [
-    "window-controls-overlay"
+    "fullscreen"
   ],
   "description": "Registre aqui os horarios de Ponto e acompanhe de modo simples e intuitivo."
 }
