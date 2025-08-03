@@ -140,3 +140,11 @@ div.container h2 {
     width: 100%;
     height: 3.57rem;
 }
+
+span.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    color: #717171;
+}
