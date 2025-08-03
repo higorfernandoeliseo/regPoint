@@ -109,8 +109,6 @@ async function gerarPDF() {
 
     const registros = await db.items.toArray()
 
-    const year = currentDate.getFullYear();
-
     doc.setFontSize(14)
     doc.setFontStyle('bold');
     doc.text('Relatório de Pontos:', 20, 20)
