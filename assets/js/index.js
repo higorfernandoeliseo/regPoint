@@ -118,7 +118,11 @@ async function gerarPDF() {
 
     registros.forEach((points) =>{
         doc.setFontSize(12)
-        doc.text(`Data: ${points.data}\n${points.tipo}\nHora: ${points.hora}\n\n `, 20, y)
+        if(points.tipo == 'Folga'){
+            doc.text(`Data: ${points.data}\n${points.tipo}\n\n `, 20, y)
+        }else{
+            doc.text(`Data: ${points.data}\n${points.tipo}\nHora: ${points.hora}\n\n `, 20, y)
+        }
         y += 20
         if(y > 280){
             doc.addPage()
