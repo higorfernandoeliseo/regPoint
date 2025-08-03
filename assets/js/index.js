@@ -74,7 +74,22 @@ itemPonto.onsubmit = async (e) => {
 
 // getAllItems()
 
+async function addFolga() {
 
+    const datainput = document.getElementById('dia_registro').value
+    const getData = new Date(`${datainput}T12:00:00Z`)
+    data = getData.toLocaleDateString('pt-BR');
+    const hora = `00:00`
+    const tipo = `Folga`
+
+    if(datainput.length > 0){
+        await db.items.add({data,hora,tipo})
+        await populateItemsDiv()
+
+        itemPonto.reset()
+    }
+
+}
 
 async function gerarPDF() {
 
