@@ -21,7 +21,9 @@
 <body>
     
     <nav>
-        <p>RegPoint</p>
+        <div class="logo">
+            <img src="assets/logo-app.png" alt="regPoint Logo">
+        </div>
     </nav>
     <div class="container">
         <h2>Novo Ponto:</h2>
@@ -46,13 +48,15 @@
             Folga
         </button>
 
-        <h2>Seus Registros:</h2>
+        <h2>Registros recentes:</h2>
         <div id="registrosBox"></div>
+        <button type="submit" class="btnVerRegs" onclick="allPoints()">
+            Ver tudo
+        </button>
         <br />
         <button type="submit" id="exportButton" onclick="gerarPDF()">
             Exportar Dados
         </button>
-
     </div>
 
     <span class="copyright">Desenvolvido por Igor Eliseo.</span>

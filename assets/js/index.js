@@ -14,14 +14,20 @@ db.version(1).stores({
 
 const populateItemsDiv = async () => {
 
-    const allItems = await db.items.reverse().toArray()
+    const allItems = await db.items.reverse().limit(5).toArray()
 
     itemsDiv.innerHTML = '';
     allItems.forEach(item => {
       const li = document.createElement('li')
-      itemsDiv.innerHTML += `<div id="registroItem">
-            <span class="data_reg">${item.data} - ${item.tipo}:  <span class="horarios">${item.hora}</span></span>
+      if(item.tipo == 'Folga'){
+         itemsDiv.innerHTML += `<div id="registroItem">
+            <span class="data_reg">${item.data} - ${item.tipo} <button class="removeBtn" onclick="removPoint(${item.pontoid})"> <img src="assets/trash-icon.png" /> </button></span> 
         </div>`
+      }else{
+        itemsDiv.innerHTML += `<div id="registroItem">
+            <span class="data_reg">${item.data} - ${item.tipo}:  <span class="horarios">${item.hora}</span> <button class="removeBtn" onclick="removPoint(${item.pontoid})"> <img src="assets/trash-icon.png" /> </button></span>
+        </div>`
+      }
 
 
     })
@@ -48,6 +54,7 @@ itemPonto.onsubmit = async (e) => {
     }
 }
 
+
 //const dados = db.items.where('data').equals('27/07/2025').toArray()
 //console.log(dados)
 
@@ -73,6 +80,11 @@ itemPonto.onsubmit = async (e) => {
 // }
 
 // getAllItems()
+
+const removPoint = async (id) => {
+    await db.items.delete(id)
+    await populateItemsDiv()
+}
 
 async function addFolga() {
 
@@ -129,3 +141,26 @@ async function gerarPDF() {
 // db.items.where('data').equals(point.data).each(item => {
 //             console.log(`Hora: ${item.hora}`)
 //         })
+
+async function allPoints() {
+
+
+    const allItems = await db.items.reverse().toArray()
+
+    itemsDiv.innerHTML = '';
+    allItems.forEach(item => {
+      const li = document.createElement('li')
+      if(item.tipo == 'Folga'){
+         itemsDiv.innerHTML += `<div id="registroItem">
+            <span class="data_reg">${item.data} - ${item.tipo} <button class="removeBtn" onclick="removPoint(${item.pontoid})"> <img src="assets/trash-icon.png" /> </button></span> 
+        </div>`
+      }else{
+        itemsDiv.innerHTML += `<div id="registroItem">
+            <span class="data_reg">${item.data} - ${item.tipo}:  <span class="horarios">${item.hora}</span> <button class="removeBtn" onclick="removPoint(${item.pontoid})"> <img src="assets/trash-icon.png" /> </button></span>
+        </div>`
+      }
+
+
+    })
+
+}

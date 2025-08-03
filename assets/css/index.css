@@ -20,13 +20,24 @@ body {
 }
 
 nav {
-    background: #F6F5F3;
-    border-bottom: 1px solid #D4D4D4;
-    height: 3.60rem;
+    background: #f3f2ed;
+    border-bottom: 2px solid #e8e6e7;
     line-height: 4rem;
     color: #000;
     padding-left: 2rem;
     margin-bottom: 1rem;
+    padding: 0.96rem;
+}
+
+nav div.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+nav div.logo img {
+    width: 170px;
 }
 
 nav p {
@@ -156,11 +167,36 @@ div.container h2 {
     outline: none;
 }
 
+.btnVerRegs {
+    border-top: 1px solid #585449;
+    background-color: #fff;
+    color: #585449;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: 'inter';
+    font-size: 1em;
+    font-weight: 700;
+    width: 100%;
+    height: 2.57rem;
+    margin-bottom: 35px;
+    outline: none;
+    border:none;
+}
+
+.removeBtn {
+    margin-left: 10px;
+    width: 20px;
+    border: none;
+    color: #585449;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
 span.copyright {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1em;
     color: #717171;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
 }
